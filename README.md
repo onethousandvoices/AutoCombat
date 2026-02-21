@@ -6,7 +6,7 @@ A Unity 6 auto-combat prototype where a player navigates a closed arena and auto
 
 The player moves freely using WASD with a third-person orbital camera. When the player stops and an enemy is within attack range, combat triggers automatically - the character lunges toward the closest target, deals damage, and returns to its original position. A visual indicator under the player's feet shows the attack radius, turning red when hostiles are in range.
 
-Enemies patrol the arena along randomized waypoint paths. They avoid each other and the player using velocity-based obstacle avoidance (ORCA). When killed, enemies play a death animation and respawn after a configurable delay. A kill counter tracks progress on screen.
+Enemies patrol the arena along randomized waypoint paths. They avoid each other and the player using velocity-based steering avoidance. When killed, enemies play a death animation and respawn after a configurable delay. A kill counter tracks progress on screen.
 
 ## Key Features
 

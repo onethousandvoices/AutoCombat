@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AutoCombat.AI
 {
-    public sealed class OrcaAvoidance : IOrcaAvoidance
+    public sealed class SteeringAvoidance : ISteeringAvoidance
     {
         private const float TIME_HORIZON = 0.5f;
         private const float INVERSE_TIME_HORIZON = 1f / TIME_HORIZON;

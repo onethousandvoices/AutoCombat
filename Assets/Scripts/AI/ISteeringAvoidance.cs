@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AutoCombat.AI
 {
-    public interface IOrcaAvoidance
+    public interface ISteeringAvoidance
     {
         void ComputeVelocities(List<EnemyModel> agents, float avoidanceRadius, Vector3 playerPosition);
     }

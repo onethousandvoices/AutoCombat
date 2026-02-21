@@ -16,7 +16,7 @@ namespace AutoCombat.AI
         [Inject] private PlayerModel _playerModel;
         [Inject] private EnemyConfig _config;
         [Inject] private RoomConfig _roomConfig;
-        [Inject] private IOrcaAvoidance _orca;
+        [Inject] private ISteeringAvoidance _steering;
         [Inject] private ComponentPool<EnemyView> _pool;
 
         private readonly Dictionary<EnemyModel, EnemyView> _viewMap = new();
@@ -36,7 +36,7 @@ namespace AutoCombat.AI
                 UpdatePatrol(enemy, speed);
             }
 
-            _orca.ComputeVelocities(enemies, _config.AvoidanceRadius, _playerModel.Position.Value);
+            _steering.ComputeVelocities(enemies, _config.AvoidanceRadius, _playerModel.Position.Value);
 
             for (var i = 0; i < enemies.Count; i++)
             {

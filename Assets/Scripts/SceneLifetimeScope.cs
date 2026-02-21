@@ -37,7 +37,7 @@ public sealed class SceneLifetimeScope : LifetimeScope
         builder.Register<PlayerModel>(Lifetime.Singleton);
         builder.Register<CombatModel>(Lifetime.Singleton);
 
-        builder.Register<OrcaAvoidance>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
+        builder.Register<SteeringAvoidance>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
         builder.Register<AttackAnimator>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
         builder.Register<PatrolWaypointProvider>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf();
         builder.Register(_ => new ComponentPool<EnemyView>(_enemyPrefab, 5), Lifetime.Singleton);
